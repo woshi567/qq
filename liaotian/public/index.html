@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="./js/socket.io.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <style>
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+    *{
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .me,.other{
+      margin: 10px 0;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .other{
+      justify-content: start;
+    }
+    .me>div:last-child,.other>div:first-child{
+      background-size: 100%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .other img{
+      width: 100%;
+    }
+    .me img{
+      width: 100%;
+    }
+    .me>div:first-child,.other>div:last-child{
+      text-align: start;
+      margin-right: 10px;
+      background-color: #fff;
+      border-radius: 15px;
+      padding:10px 10px 0;
+      font-size: 18px;
+      line-height: 28px;
+      max-width:70% ;
+    }
+    .me img{
+      width: 100%;
+    }
+  </style>
+</html>
